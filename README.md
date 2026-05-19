@@ -1,39 +1,44 @@
 ## Markdown-Notes-Taker
-#### A simple Web Application using Text processing, Markdown libraries, persistent storage, REST API with file upload.
-![Screenshot 2024-06-18 084529](https://github.com/ANMOLAGRAWAL7/Markdown-Notes-Taker/assets/138976989/1b5e9668-fe3e-430a-93b3-3f2ea2c93c77)
+#### A full-stack Web Application for taking notes in Markdown with live preview, grammar checking, and persistent storage.
 
 ## Features of the Application:
 ---
-### 1. Markdown to html render:
-  --> Used [marked](https://www.npmjs.com/package/marked) npm for parsing marked down text to html
-### 2. Grammar check feature:
---> Used [language tool](https://dev.languagetool.org/public-http-api) API to check for correct grammar syntax
-### 3. Word pattern search within the note
---> Used KPM algorithm to find word patterns
-### 4. Markdown file upload feature
---> Used [multer](https://www.npmjs.com/package/multer) npm to do file handling in javascript
-### 5. Restful-API endpoints to Create, Read, Update and Delete notes
+### 1. Markdown to HTML Render:
+--> Used [marked](https://www.npmjs.com/package/marked) npm package for parsing markdown text to HTML in real time
+
+### 2. Grammar Check Feature:
+--> Integrated [LanguageTool](https://dev.languagetool.org/public-http-api) public API for grammar and spelling validation
+
+### 3. Word Pattern Search within the Note:
+--> Implemented KMP (Knuth-Morris-Pratt) algorithm for efficient pattern matching inside notes
+
+### 4. Markdown File Upload Feature:
+--> Used [multer](https://www.npmjs.com/package/multer) npm package for handling markdown file uploads
+
+### 5. RESTful API Endpoints:
+--> Full CRUD support — Create, Read, Update and Delete notes via REST API
+
 ---
-## Techstack:
-1.HTML, CSS, JAVASCRIPT for Frontend \
-2.NODE-JS,EXPRESS-JS,JAVASCRIPT For Backend \
-3.Database: POSTGRES-SQL  
+## Tech Stack:
+1. HTML, CSS, JavaScript — Frontend
+2. Node.js, Express.js — Backend
+3. PostgreSQL — Database
+4. EJS — Templating Engine
 
-![Screenshot 2024-06-18 100616](https://github.com/ANMOLAGRAWAL7/Markdown-Notes-Taker/assets/138976989/19aea697-7de0-44b4-82ff-8aad6a4dba1f)
-![Screenshot 2024-06-18 100714](https://github.com/ANMOLAGRAWAL7/Markdown-Notes-Taker/assets/138976989/7f5943aa-834e-4150-92f8-4e6dd8cd06ab)
+---
+## Steps to Run the Application:
+1. Clone the repository
+2. cd into the project folder
+3. Create a `.env` file with your PostgreSQL credentials:
+DB_USER=your_postgres_username
+DB_HOST=localhost
+DB_NAME=your_database_name
+DB_PASSWORD=your_password
+DB_PORT=5432
+4. Run `npm install`
+5. Run `node index.js`
+6. Open browser at `http://localhost:3000`
 
-### STEPS TO RUN THE APPLICATION:
-1.Cd over to your folder \
-2.Setup postgres databse as: \
--->const db = new pg.Client({ \
-  user: "postgres", \
-  host: "localhost", \
-  database: your postgres database name, \
-  password: your postgres password, \
-  port: your postgres port, \
-}); \
-3.run npm i \
-4.run node index.js \
-5.Headover to your browser at http://localhost:3000
-
-"# My Notes App" 
+---
+## Live Demo:
+http://54.161.108.225/
